@@ -10,10 +10,12 @@ import UIKit
 
 class BreakViewController: UIViewController {
 
+    @IBOutlet var cactusViewImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cactusViewImage.layer.cornerRadius = cactusViewImage.frame.width/2
     }
 
     

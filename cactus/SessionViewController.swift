@@ -22,7 +22,6 @@ class SessionViewController: UIViewController {
         plantButtonView.layer.cornerRadius = 14
         plantButtonView.layer.masksToBounds = true
         
-        
     }
 
 

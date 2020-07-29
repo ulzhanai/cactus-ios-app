@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB8-RB-Bbo">
-                                <rect key="frame" x="50" y="643" width="344" height="56"/>
+                                <rect key="frame" x="35" y="628" width="344" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="primaryColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -77,15 +77,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4C-wC-RzN">
-                                <rect key="frame" x="50" y="65" width="14" height="14"/>
+                                <rect key="frame" x="45" y="60" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Vector" backgroundImage="Vector2"/>
+                                <state key="normal" image="sample"/>
                                 <connections>
                                     <action selector="didCloseButton" destination="GoZ-I0-oPz" eventType="touchUpInside" id="AVc-9h-Fo6"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-og-XQp">
-                                <rect key="frame" x="101" y="147" width="213" height="213"/>
+                                <rect key="frame" x="101" y="152" width="213" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -93,6 +93,9 @@
                         <color key="backgroundColor" name="backgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="JbC-dH-ZnJ"/>
                     </view>
+                    <connections>
+                        <outlet property="cactusViewImage" destination="EVW-og-XQp" id="ERq-uK-Onv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLM-DA-yZl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,9 +103,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Vector" width="14" height="14"/>
-        <image name="Vector2" width="14" height="14"/>
         <image name="cactus_1" width="564" height="846"/>
+        <image name="sample" width="24" height="24"/>
         <namedColor name="backgroundColor">
             <color red="0.99215686274509807" green="0.96862745098039216" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
