@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C801E9F324D26DD00044B525 /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801E9F224D26DD00044B525 /* Break.swift */; };
+		C801E9F524D26DDE0044B525 /* BreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C801E9F424D26DDE0044B525 /* BreakManager.swift */; };
 		C829268A24D0B0140086E50C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829268924D0B0140086E50C /* AppDelegate.swift */; };
 		C829268E24D0B0140086E50C /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829268D24D0B0140086E50C /* SessionViewController.swift */; };
 		C829269124D0B0140086E50C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C829268F24D0B0140086E50C /* Main.storyboard */; };
 		C829269324D0B0170086E50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C829269224D0B0170086E50C /* Assets.xcassets */; };
 		C829269624D0B0170086E50C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C829269424D0B0170086E50C /* LaunchScreen.storyboard */; };
 		C82926A024D0DA240086E50C /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829269F24D0DA240086E50C /* BreakViewController.swift */; };
+		C8B48F3624D22A49000E972A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48F3524D22A48000E972A /* Session.swift */; };
+		C8B48F3824D24948000E972A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48F3724D24948000E972A /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C801E9F224D26DD00044B525 /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
+		C801E9F424D26DDE0044B525 /* BreakManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakManager.swift; sourceTree = "<group>"; };
 		C829268624D0B0140086E50C /* cactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C829268924D0B0140086E50C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C829268D24D0B0140086E50C /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +29,9 @@
 		C829269224D0B0170086E50C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C829269524D0B0170086E50C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C829269724D0B0170086E50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C829269F24D0DA240086E50C /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
+		C829269F24D0DA240086E50C /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BreakViewController.swift; path = ../../BreakViewController.swift; sourceTree = "<group>"; };
+		C8B48F3524D22A48000E972A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C8B48F3724D24948000E972A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C801E9EC24D26D220044B525 /* Break */ = {
+			isa = PBXGroup;
+			children = (
+				C801E9F124D26D910044B525 /* Model */,
+				C801E9ED24D26D2B0044B525 /* Controller */,
+			);
+			path = Break;
+			sourceTree = "<group>";
+		};
+		C801E9ED24D26D2B0044B525 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C829269F24D0DA240086E50C /* BreakViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C801E9F124D26D910044B525 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C801E9F224D26DD00044B525 /* Break.swift */,
+				C801E9F424D26DDE0044B525 /* BreakManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C829267D24D0B0140086E50C = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +90,41 @@
 		C829268824D0B0140086E50C /* cactus */ = {
 			isa = PBXGroup;
 			children = (
+				C801E9EC24D26D220044B525 /* Break */,
+				C8B48F3224D2285E000E972A /* Session */,
 				C829268924D0B0140086E50C /* AppDelegate.swift */,
-				C829268D24D0B0140086E50C /* SessionViewController.swift */,
 				C829268F24D0B0140086E50C /* Main.storyboard */,
 				C829269224D0B0170086E50C /* Assets.xcassets */,
 				C829269424D0B0170086E50C /* LaunchScreen.storyboard */,
 				C829269724D0B0170086E50C /* Info.plist */,
-				C829269F24D0DA240086E50C /* BreakViewController.swift */,
 			);
 			path = cactus;
+			sourceTree = "<group>";
+		};
+		C8B48F3224D2285E000E972A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				C8B48F3424D22881000E972A /* Controller */,
+				C8B48F3324D22877000E972A /* Model */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		C8B48F3324D22877000E972A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8B48F3524D22A48000E972A /* Session.swift */,
+				C8B48F3724D24948000E972A /* SessionManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8B48F3424D22881000E972A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C829268D24D0B0140086E50C /* SessionViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B48F3624D22A49000E972A /* Session.swift in Sources */,
+				C801E9F324D26DD00044B525 /* Break.swift in Sources */,
+				C801E9F524D26DDE0044B525 /* BreakManager.swift in Sources */,
+				C8B48F3824D24948000E972A /* SessionManager.swift in Sources */,
 				C829268E24D0B0140086E50C /* SessionViewController.swift in Sources */,
 				C829268A24D0B0140086E50C /* AppDelegate.swift in Sources */,
 				C82926A024D0DA240086E50C /* BreakViewController.swift in Sources */,
