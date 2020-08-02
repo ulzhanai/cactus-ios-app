@@ -10,15 +10,19 @@ import Foundation
 
 protocol SessionManagerDelegate {
     func showSessionStarted()
+    
     func showTimeLeft(secondsLeft: Int)
+    func showTimeLeftInCancelX(secondsLeft: Int)
+    
     func showSessionEnded()
+    func showCancelXEnded()
     func showUserCancelledSession()
-    //func userCancelledSession()
 }
 
 class SessionManager {
     var sessionDelegate: SessionManagerDelegate
     var timer: Timer?
+    var timerInCancelX: Timer?
     
     init(sessionDelegate: SessionManagerDelegate) {
         self.sessionDelegate = sessionDelegate
@@ -27,8 +31,10 @@ class SessionManager {
     func startSession(session: Session) {
         sessionDelegate.showSessionStarted()
         sessionDelegate.showTimeLeft(secondsLeft: session.durationInSeconds)
+        sessionDelegate.showTimeLeftInCancelX(secondsLeft: 10)
         
         var secondsLeft = session.durationInSeconds
+        
 
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             secondsLeft -= 1
@@ -41,6 +47,34 @@ class SessionManager {
                 self.timer = nil
             }
         }
+        
+        var secondsLeftInCancelX = 10
+        
+        timerInCancelX = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            secondsLeftInCancelX -= 1
+            self.sessionDelegate.showTimeLeftInCancelX(secondsLeft: secondsLeftInCancelX)
+            
+            if secondsLeftInCancelX == 0{
+                
+                if(secondsLeft>0){ //if session is still in progress
+                  self.sessionDelegate.showCancelXEnded()
+                }
+                else{ // if session is also ended
+                    self.sessionDelegate.showSessionEnded()
+                }
+                
+                self.timerInCancelX?.invalidate()
+                self.timerInCancelX = nil
+            }
+            }
+        
+    }
+    
+    func cancelXSession(){
+        sessionDelegate.showUserCancelledSession()
+        self.timerInCancelX?.invalidate()
+        self.timerInCancelX = nil
+    
     }
     
     func cancelSession(){
