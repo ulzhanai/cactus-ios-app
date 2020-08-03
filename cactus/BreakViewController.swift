@@ -92,6 +92,10 @@ class BreakViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         finishButton.isHidden = true
         
         print("Break ended")
+        
+        //closing current view
+        presentingViewController?.dismiss(animated: true, completion: nil)
+        
     }
      
     func showBreakCanceled() {
@@ -101,6 +105,9 @@ class BreakViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         finishButton.isHidden = true
         
         print("Break canceled")
+        
+       //closing current view
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
 }

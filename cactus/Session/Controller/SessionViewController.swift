@@ -9,11 +9,13 @@
 import UIKit
 
 class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, SessionManagerDelegate {
+   
     @IBOutlet var cactusImageView: UIImageView!
     @IBOutlet var plantButtonView: UIButton!
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var countDownLabel: UILabel!
     @IBOutlet var giveUpButton: UIButton!
+    @IBOutlet var cancelXButton: UIButton!
     
     
    lazy var sessionManager = SessionManager(sessionDelegate: self)
@@ -53,6 +55,10 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         sessionManager.cancelSession()
     }
     
+    @IBAction func didTapCancelXButton() {
+        sessionManager.cancelSession()
+        sessionManager.cancelXSession()
+    }
     
     //PickerDataSource/Delegate
     
@@ -75,7 +81,8 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         pickerView.isHidden = true
         plantButtonView.isHidden = true
         countDownLabel.isHidden = false
-        giveUpButton.isHidden = false
+        giveUpButton.isHidden = true
+        cancelXButton.isHidden = false
     }
     
     func showTimeLeft(secondsLeft: Int) {
@@ -83,12 +90,23 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         print("\(secondsLeft)")
     }
     
+    func showTimeLeftInCancelX(secondsLeft: Int) {
+        cancelXButton.setTitle("Cancel(\(secondsLeft))", for: .normal)
+    }
+    
+    func showCancelXEnded(){
+        cancelXButton.isHidden = true
+        giveUpButton.isHidden = false
+    }
+    
+        
     func showSessionEnded() {
         performSegue(withIdentifier: "showBreak", sender: nil)
         pickerView.isHidden = false
         plantButtonView.isHidden = false
         countDownLabel.isHidden = true
         giveUpButton.isHidden = true
+        cancelXButton.isHidden = true
     }
     
     func showUserCancelledSession() {
@@ -96,6 +114,7 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         plantButtonView.isHidden = false
         countDownLabel.isHidden = true
         giveUpButton.isHidden = true
+        cancelXButton.isHidden = true
     }
     
 }
