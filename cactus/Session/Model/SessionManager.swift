@@ -70,13 +70,11 @@ class SessionManager {
         
     }
     
-    
     func cancelSession(){
         sessionDelegate.showUserCancelledSession()
         self.timer?.invalidate()
         self.timer = nil
         
-        sessionDelegate.showUserCancelledSession()
         self.timerInCancelX?.invalidate()
         self.timerInCancelX = nil
     }
