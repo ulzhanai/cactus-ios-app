@@ -35,5 +35,17 @@ class LeaderboardViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          print("didSelect")
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+           print("Deleted")
+
+           LeadersStorage.shared.leaders.remove(at: indexPath.row)
+           tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+           tableView.reloadData() //update indexes
+         }
+    }
+    
 
 }

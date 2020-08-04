@@ -62,9 +62,6 @@ class SessionManager {
                 if(secondsLeft>0){ //if session is still in progress
                   self.sessionDelegate.showCancelXEnded()
                 }
-                else{ // if session is also ended
-                    self.sessionDelegate.showSessionEnded()
-                }
                 
                 self.timerInCancelX?.invalidate()
                 self.timerInCancelX = nil
@@ -73,16 +70,14 @@ class SessionManager {
         
     }
     
-    func cancelXSession(){
-        sessionDelegate.showUserCancelledSession()
-        self.timerInCancelX?.invalidate()
-        self.timerInCancelX = nil
-    
-    }
     
     func cancelSession(){
         sessionDelegate.showUserCancelledSession()
         self.timer?.invalidate()
         self.timer = nil
+        
+        sessionDelegate.showUserCancelledSession()
+        self.timerInCancelX?.invalidate()
+        self.timerInCancelX = nil
     }
 }

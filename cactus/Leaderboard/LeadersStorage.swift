@@ -9,9 +9,9 @@
 import Foundation
 
 class LeadersStorage {
-    static let shared = LeadersStorage()
+    static var shared = LeadersStorage()
 
-    let leaders = [Leader(name: "Konstantin Konstantinopolsky", hoursCount: 250),
+    var leaders = [Leader(name: "Konstantin Konstantinopolsky", hoursCount: 250),
                    Leader(name: "Cody Fisher", hoursCount: 240),
                    Leader(name: "Kristin Watson", hoursCount: 200),
                    Leader(name: "Dianne Russell", hoursCount: 180),

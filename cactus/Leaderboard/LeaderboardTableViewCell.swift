@@ -23,12 +23,10 @@ class LeaderboardTableViewCell: UITableViewCell {
  
     func configure(with leader: Leader, index: Int){
         
-        hoursCountLabel.text = "\(leader.hoursCount)"
+        hoursCountLabel.text = "\(leader.hoursCount) hr."
         leaderNameLabel.text = leader.name
         
-        indexLabel.text = "\(index+1)" //cause index in array starts at 0
-        
-
+        indexLabel.text = "\(index+1)" //cause index in array starts at
         
     }
 
