@@ -23,6 +23,7 @@ class SessionManager {
     var sessionDelegate: SessionManagerDelegate
     var timer: Timer?
     var timerInCancelX: Timer?
+    let sessionStorage = SessionsStorage()
     
     init(sessionDelegate: SessionManagerDelegate) {
         self.sessionDelegate = sessionDelegate
@@ -41,7 +42,9 @@ class SessionManager {
             self.sessionDelegate.showTimeLeft(secondsLeft: secondsLeft)
             
             if secondsLeft == 0 {
-                self.sessionDelegate.showSessionEnded()
+                 SessionsStorage.shared.add(session: session)
+                print("session added to storage")
+                 self.sessionDelegate.showSessionEnded()
                 
                 self.timer?.invalidate()
                 self.timer = nil
