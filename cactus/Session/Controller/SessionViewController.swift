@@ -46,7 +46,7 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let selectedDuration = durations[selectedPickerRow]
         
         //not turning into seconds
-        let session = Session(durationInSeconds: selectedDuration)
+        let session = Session(durationInSeconds: selectedDuration, startDate: Date())
         sessionManager.startSession(session: session)
     }
     
@@ -57,7 +57,6 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBAction func didTapCancelXButton() {
         sessionManager.cancelSession()
-        sessionManager.cancelXSession()
     }
     
     //PickerDataSource/Delegate
@@ -91,7 +90,12 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func showTimeLeftInCancelX(secondsLeft: Int) {
-        cancelXButton.setTitle("Cancel(\(secondsLeft))", for: .normal)
+        let title = "Cancel (\(secondsLeft))"
+               
+               UIView.performWithoutAnimation {
+                   cancelXButton.setTitle(title, for: .normal)
+                   cancelXButton.layoutIfNeeded()
+               }
     }
     
     func showCancelXEnded(){

@@ -37,7 +37,6 @@ class OnboardingViewController: UIViewController {
         onboardingScreenNum += 1
         
         if onboardingScreenNum < 3 {
-            print(onboardingScreenNum)
             onboardingLabel.text = onboardingLabelTexts[onboardingScreenNum]
             onboardingImage.image = UIImage(named: onboardingImageNames[onboardingScreenNum])
             onboardingButton.setTitle(onboardingButtonNames[onboardingScreenNum], for: .normal)
