@@ -17,12 +17,14 @@ class BreakViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet var finishButton: UIButton!
         
     lazy var breakManager = BreakManager(breakDelegate: self)
+    var finishedSession: Session?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         cactusViewImage.layer.cornerRadius = cactusViewImage.frame.width/2
         cactusViewImage.layer.masksToBounds = true
+        cactusViewImage.image = UIImage(named: finishedSession!.boughtCactus.imageName)
         
         breakButtonView.layer.cornerRadius = 14
         breakButtonView.layer.masksToBounds = true
@@ -37,7 +39,6 @@ class BreakViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         pickerView.delegate = self
         
     }
-
     
     @IBAction func didCloseButton() {
         presentingViewController?.dismiss(animated: true, completion: nil)

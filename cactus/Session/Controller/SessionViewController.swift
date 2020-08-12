@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, SessionManagerDelegate {
+class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, SessionManagerDelegate{
    
     @IBOutlet var cactusImageView: UIImageView!
     @IBOutlet var plantButtonView: UIButton!
@@ -17,9 +17,12 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet var giveUpButton: UIButton!
     @IBOutlet var cancelXButton: UIButton!
     
-    
    lazy var sessionManager = SessionManager(sessionDelegate: self)
+
+   // Empty vars
+    var finishedSession: Session?
     
+      
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,15 +41,20 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         pickerView.dataSource = self
         pickerView.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(cactusWasSelected), name: NSNotification.Name("cactus_was_selected"), object: nil)
     }
 
+    @objc func cactusWasSelected() {
+        cactusImageView.image = UIImage(named: CactusesStorage.shared.selectedCactus.imageName)
+            print("we've got here \(CactusesStorage.shared.selectedCactus.imageName) at Session screen")
+        }
 
     @IBAction func didTapPlantButton() {
         let selectedPickerRow = pickerView.selectedRow(inComponent: 0)
         let selectedDuration = durations[selectedPickerRow]
         
         //not turning into seconds
-        let session = Session(durationInSeconds: selectedDuration, startDate: Date())
+        let session = Session(durationInSeconds: selectedDuration, startDate: Date(), boughtCactus: CactusesStorage.shared.selectedCactus)
         sessionManager.startSession(session: session)
     }
     
@@ -104,7 +112,9 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
         
-    func showSessionEnded() {
+    func showSessionEnded(session: Session) {
+        finishedSession = session
+        
         performSegue(withIdentifier: "showBreak", sender: nil)
         pickerView.isHidden = false
         plantButtonView.isHidden = false
@@ -119,6 +129,16 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         countDownLabel.isHidden = true
         giveUpButton.isHidden = true
         cancelXButton.isHidden = true
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let breakVC = segue.destination as? BreakViewController {
+            breakVC.finishedSession = finishedSession
+            
+        }
     }
     
 }

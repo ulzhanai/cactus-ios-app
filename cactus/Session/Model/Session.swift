@@ -11,10 +11,12 @@ import Foundation
 class Session {
     let durationInSeconds: Int
     let startDate: Date
+    let boughtCactus: Cactus
     
-    init(durationInSeconds: Int, startDate: Date) {
+    init(durationInSeconds: Int, startDate: Date, boughtCactus: Cactus) {
         self.durationInSeconds = durationInSeconds
         self.startDate = startDate
+        self.boughtCactus = boughtCactus
     }
 }
 
