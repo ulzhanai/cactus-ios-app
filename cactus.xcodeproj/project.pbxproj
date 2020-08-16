@@ -22,8 +22,16 @@
 		C829269324D0B0170086E50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C829269224D0B0170086E50C /* Assets.xcassets */; };
 		C829269624D0B0170086E50C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C829269424D0B0170086E50C /* LaunchScreen.storyboard */; };
 		C82926A024D0DA240086E50C /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829269F24D0DA240086E50C /* BreakViewController.swift */; };
+		C83496AE24DB5F640019B0CD /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496AD24DB5F640019B0CD /* LearnViewController.swift */; };
+		C83496B124DBA3470019B0CD /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B024DBA3470019B0CD /* ArticleCollectionViewCell.swift */; };
+		C83496B424DC66410019B0CD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B324DC66410019B0CD /* Article.swift */; };
+		C83496B624DC68CE0019B0CD /* ArticlesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */; };
 		C8B48F3624D22A49000E972A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48F3524D22A48000E972A /* Session.swift */; };
 		C8B48F3824D24948000E972A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48F3724D24948000E972A /* SessionManager.swift */; };
+		C8B8470D24E0C72A00D938F2 /* CactieShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8470C24E0C72A00D938F2 /* CactieShopViewController.swift */; };
+		C8B8471424E0D2F000D938F2 /* Cactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8471324E0D2F000D938F2 /* Cactus.swift */; };
+		C8B8471624E0D68900D938F2 /* CactusesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8471524E0D68900D938F2 /* CactusesStorage.swift */; };
+		C8B8471924E0D79B00D938F2 /* CactieShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8471824E0D79B00D938F2 /* CactieShopCollectionViewCell.swift */; };
 		C8CE64F824D92F9B00909C02 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CE64F724D92F9B00909C02 /* LeaderboardTableViewCell.swift */; };
 		C8F3161724D6E250000BA1AD /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3161624D6E250000BA1AD /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,8 +54,16 @@
 		C829269524D0B0170086E50C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C829269724D0B0170086E50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C829269F24D0DA240086E50C /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BreakViewController.swift; path = ../../BreakViewController.swift; sourceTree = "<group>"; };
+		C83496AD24DB5F640019B0CD /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		C83496B024DBA3470019B0CD /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
+		C83496B324DC66410019B0CD /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesStorage.swift; sourceTree = "<group>"; };
 		C8B48F3524D22A48000E972A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C8B48F3724D24948000E972A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		C8B8470C24E0C72A00D938F2 /* CactieShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactieShopViewController.swift; sourceTree = "<group>"; };
+		C8B8471324E0D2F000D938F2 /* Cactus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cactus.swift; sourceTree = "<group>"; };
+		C8B8471524E0D68900D938F2 /* CactusesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactusesStorage.swift; sourceTree = "<group>"; };
+		C8B8471824E0D79B00D938F2 /* CactieShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactieShopCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8CE64F724D92F9B00909C02 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		C8F3161624D6E250000BA1AD /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +153,8 @@
 		C829268824D0B0140086E50C /* cactus */ = {
 			isa = PBXGroup;
 			children = (
+				C8B8470E24E0D22900D938F2 /* CactieShop */,
+				C83496AB24DB5F130019B0CD /* Learn */,
 				C80E9BCC24D8A88400D360DF /* Leaderboard */,
 				C80E9BC924D8A60E00D360DF /* SessionsList */,
 				C80E9BC624D892FD00D360DF /* TabBar */,
@@ -150,6 +168,41 @@
 				C8F3161624D6E250000BA1AD /* OnboardingViewController.swift */,
 			);
 			path = cactus;
+			sourceTree = "<group>";
+		};
+		C83496AB24DB5F130019B0CD /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				C83496B224DC65F30019B0CD /* Model */,
+				C83496AF24DBA2860019B0CD /* View */,
+				C83496AC24DB5F250019B0CD /* Controller */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		C83496AC24DB5F250019B0CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C83496AD24DB5F640019B0CD /* LearnViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C83496AF24DBA2860019B0CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C83496B024DBA3470019B0CD /* ArticleCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C83496B224DC65F30019B0CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C83496B324DC66410019B0CD /* Article.swift */,
+				C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C8B48F3224D2285E000E972A /* Session */ = {
@@ -176,6 +229,41 @@
 				C829268D24D0B0140086E50C /* SessionViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C8B8470E24E0D22900D938F2 /* CactieShop */ = {
+			isa = PBXGroup;
+			children = (
+				C8B8471724E0D75900D938F2 /* View */,
+				C8B8471224E0D2D600D938F2 /* Model */,
+				C8B8471124E0D26E00D938F2 /* Controller */,
+			);
+			path = CactieShop;
+			sourceTree = "<group>";
+		};
+		C8B8471124E0D26E00D938F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C8B8470C24E0C72A00D938F2 /* CactieShopViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C8B8471224E0D2D600D938F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8B8471324E0D2F000D938F2 /* Cactus.swift */,
+				C8B8471524E0D68900D938F2 /* CactusesStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8B8471724E0D75900D938F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8B8471824E0D79B00D938F2 /* CactieShopCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,18 +337,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83496B624DC68CE0019B0CD /* ArticlesStorage.swift in Sources */,
 				C8B48F3624D22A49000E972A /* Session.swift in Sources */,
 				C8CE64F824D92F9B00909C02 /* LeaderboardTableViewCell.swift in Sources */,
+				C8B8471924E0D79B00D938F2 /* CactieShopCollectionViewCell.swift in Sources */,
 				C801E9F324D26DD00044B525 /* Break.swift in Sources */,
+				C83496B124DBA3470019B0CD /* ArticleCollectionViewCell.swift in Sources */,
 				C801E9F524D26DDE0044B525 /* BreakManager.swift in Sources */,
 				C8F3161724D6E250000BA1AD /* OnboardingViewController.swift in Sources */,
+				C83496AE24DB5F640019B0CD /* LearnViewController.swift in Sources */,
 				C80E9BCB24D8A68B00D360DF /* SessionsListViewController.swift in Sources */,
+				C8B8470D24E0C72A00D938F2 /* CactieShopViewController.swift in Sources */,
 				C8B48F3824D24948000E972A /* SessionManager.swift in Sources */,
 				C829268E24D0B0140086E50C /* SessionViewController.swift in Sources */,
 				C829268A24D0B0140086E50C /* AppDelegate.swift in Sources */,
+				C83496B424DC66410019B0CD /* Article.swift in Sources */,
 				C80E9BD624D8D6B400D360DF /* SessionsListTableViewCell.swift in Sources */,
 				C80E9BD024D8B0F300D360DF /* SessionsStorage.swift in Sources */,
+				C8B8471424E0D2F000D938F2 /* Cactus.swift in Sources */,
 				C80E9BD224D8CB1900D360DF /* Leader.swift in Sources */,
+				C8B8471624E0D68900D938F2 /* CactusesStorage.swift in Sources */,
 				C80E9BCE24D8AA1C00D360DF /* LeaderboardViewController.swift in Sources */,
 				C82926A024D0DA240086E50C /* BreakViewController.swift in Sources */,
 				C80E9BD424D8CB8500D360DF /* LeadersStorage.swift in Sources */,

@@ -14,7 +14,7 @@ protocol SessionManagerDelegate {
     func showTimeLeft(secondsLeft: Int)
     func showTimeLeftInCancelX(secondsLeft: Int)
     
-    func showSessionEnded()
+    func showSessionEnded(session: Session)
     func showCancelXEnded()
     func showUserCancelledSession()
 }
@@ -42,9 +42,9 @@ class SessionManager {
             self.sessionDelegate.showTimeLeft(secondsLeft: secondsLeft)
             
             if secondsLeft == 0 {
-                 SessionsStorage.shared.add(session: session)
+                SessionsStorage.shared.add(session: session)
                 print("session added to storage")
-                 self.sessionDelegate.showSessionEnded()
+                self.sessionDelegate.showSessionEnded(session:session)
                 
                 self.timer?.invalidate()
                 self.timer = nil
