@@ -33,6 +33,7 @@ class LeaderboardViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         performSegue(withIdentifier: "showLeaderProfile", sender: nil)
          print("didSelect")
     }
     
@@ -45,6 +46,17 @@ class LeaderboardViewController: UIViewController, UITableViewDataSource, UITabl
             
            tableView.reloadData() //update indexes
          }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let profileVC = segue.destination as? LeaderProfileViewController{
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            let selectedLeader = LeadersStorage.shared.leaders[selectedIndexPath.row]
+            profileVC.leader = selectedLeader
+        }
+        
     }
     
 

@@ -34,7 +34,6 @@ class CactieShopCollectionViewCell: UICollectionViewCell {
             cactusCardView.backgroundColor = UIColor(named: "primaryColor")
         } else {
             cactusCardView.backgroundColor = UIColor(named: "secondaryBackgroundColor")
-        }
+         }
     }
-
 }

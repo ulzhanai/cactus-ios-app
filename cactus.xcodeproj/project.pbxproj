@@ -26,6 +26,9 @@
 		C83496B124DBA3470019B0CD /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B024DBA3470019B0CD /* ArticleCollectionViewCell.swift */; };
 		C83496B424DC66410019B0CD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B324DC66410019B0CD /* Article.swift */; };
 		C83496B624DC68CE0019B0CD /* ArticlesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */; };
+		C842532E24E85B0700A069DD /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842532D24E85B0700A069DD /* ArticleViewController.swift */; };
+		C842533024E969C300A069DD /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842532F24E969C300A069DD /* Author.swift */; };
+		C842533224E975D100A069DD /* LeaderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842533124E975D100A069DD /* LeaderProfileViewController.swift */; };
 		C8B48F3624D22A49000E972A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48F3524D22A48000E972A /* Session.swift */; };
 		C8B48F3824D24948000E972A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B48F3724D24948000E972A /* SessionManager.swift */; };
 		C8B8470D24E0C72A00D938F2 /* CactieShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8470C24E0C72A00D938F2 /* CactieShopViewController.swift */; };
@@ -58,6 +61,9 @@
 		C83496B024DBA3470019B0CD /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		C83496B324DC66410019B0CD /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesStorage.swift; sourceTree = "<group>"; };
+		C842532D24E85B0700A069DD /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		C842532F24E969C300A069DD /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		C842533124E975D100A069DD /* LeaderProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderProfileViewController.swift; sourceTree = "<group>"; };
 		C8B48F3524D22A48000E972A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C8B48F3724D24948000E972A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		C8B8470C24E0C72A00D938F2 /* CactieShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactieShopViewController.swift; sourceTree = "<group>"; };
@@ -126,10 +132,9 @@
 		C80E9BCC24D8A88400D360DF /* Leaderboard */ = {
 			isa = PBXGroup;
 			children = (
-				C80E9BCD24D8AA1C00D360DF /* LeaderboardViewController.swift */,
-				C80E9BD124D8CB1900D360DF /* Leader.swift */,
-				C80E9BD324D8CB8500D360DF /* LeadersStorage.swift */,
-				C8CE64F724D92F9B00909C02 /* LeaderboardTableViewCell.swift */,
+				C8E10BC924E9A1D5007C738A /* Model */,
+				C8E10BCA24E9A22F007C738A /* View */,
+				C8E10BCB24E9A251007C738A /* Controller */,
 			);
 			path = Leaderboard;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				C83496AD24DB5F640019B0CD /* LearnViewController.swift */,
+				C842532D24E85B0700A069DD /* ArticleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			children = (
 				C83496B324DC66410019B0CD /* Article.swift */,
 				C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */,
+				C842532F24E969C300A069DD /* Author.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +271,32 @@
 				C8B8471824E0D79B00D938F2 /* CactieShopCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C8E10BC924E9A1D5007C738A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C80E9BD124D8CB1900D360DF /* Leader.swift */,
+				C80E9BD324D8CB8500D360DF /* LeadersStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8E10BCA24E9A22F007C738A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8CE64F724D92F9B00909C02 /* LeaderboardTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C8E10BCB24E9A251007C738A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C80E9BCD24D8AA1C00D360DF /* LeaderboardViewController.swift */,
+				C842533124E975D100A069DD /* LeaderProfileViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C842533224E975D100A069DD /* LeaderProfileViewController.swift in Sources */,
 				C83496B624DC68CE0019B0CD /* ArticlesStorage.swift in Sources */,
 				C8B48F3624D22A49000E972A /* Session.swift in Sources */,
 				C8CE64F824D92F9B00909C02 /* LeaderboardTableViewCell.swift in Sources */,
@@ -349,6 +383,7 @@
 				C80E9BCB24D8A68B00D360DF /* SessionsListViewController.swift in Sources */,
 				C8B8470D24E0C72A00D938F2 /* CactieShopViewController.swift in Sources */,
 				C8B48F3824D24948000E972A /* SessionManager.swift in Sources */,
+				C842532E24E85B0700A069DD /* ArticleViewController.swift in Sources */,
 				C829268E24D0B0140086E50C /* SessionViewController.swift in Sources */,
 				C829268A24D0B0140086E50C /* AppDelegate.swift in Sources */,
 				C83496B424DC66410019B0CD /* Article.swift in Sources */,
@@ -358,6 +393,7 @@
 				C80E9BD224D8CB1900D360DF /* Leader.swift in Sources */,
 				C8B8471624E0D68900D938F2 /* CactusesStorage.swift in Sources */,
 				C80E9BCE24D8AA1C00D360DF /* LeaderboardViewController.swift in Sources */,
+				C842533024E969C300A069DD /* Author.swift in Sources */,
 				C82926A024D0DA240086E50C /* BreakViewController.swift in Sources */,
 				C80E9BD424D8CB8500D360DF /* LeadersStorage.swift in Sources */,
 				C80E9BC824D893BE00D360DF /* CactusTabBarController.swift in Sources */,

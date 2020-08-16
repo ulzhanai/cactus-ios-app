@@ -8,26 +8,22 @@
 
 import UIKit
 
-//protocol CactieShopViewControllerDelegate {
-//    func cactusWasSelected()
-//}
-
 class CactieShopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Cactie Shop"
         
         collectionView.collectionViewLayout = layoutForCollectionView()
         
     }
-
-        
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return CactusesStorage.shared.cactuses.count
+        return CactusesStorage.shared.cactuses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -51,9 +47,9 @@ class CactieShopViewController: UIViewController, UICollectionViewDataSource, UI
         CactusesStorage.shared.selectCactus(selection)
         //Update collection view data
         collectionView.reloadData()
-     
+        
         NotificationCenter.default.post(name: NSNotification.Name("cactus_was_selected"), object: self)
- 
+        
         print("clicked \(CactusesStorage.shared.selectedCactus.imageName)")
     }
     
@@ -75,19 +71,10 @@ class CactieShopViewController: UIViewController, UICollectionViewDataSource, UI
         return UICollectionViewCompositionalLayout(section:section)
         
     }
-
+    
     
     @IBAction func closeCactieShop(_ sender: Any) {
-        navigationController?.dismiss(animated: true, completion: nil)
-             /*presentingViewController?.dismiss(animated: true, completion: nil)*/
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
-    
-    //var delegate: CactieShopViewControllerDelegate?
-    
-//    @IBAction func didSelectCactus(_ sender: Any) {
-//        //delegate?.cactusWasSelected()
-//        NotificationCenter.default.post(name: NSNotification.Name("cactus_was_selected"), object: self)
-//    }
     
 }
