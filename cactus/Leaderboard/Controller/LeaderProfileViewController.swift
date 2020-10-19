@@ -31,9 +31,9 @@ class LeaderProfileViewController: UIViewController {
         
         leaderNameLabel.text = leader.name
         aboutLabel.text = leader.about
-        daysCountLabel.text = "\(leader.daysCount) days with cactus"
-        sessionsCountLabel.text = "\(leader.sessionsCount)"
-        totalFocusTimeLabel.text = "\(leader.totalFocusTimeInMinutes/60)h \(leader.totalFocusTimeInMinutes%60)m"
+        daysCountLabel.text = "\(leader.statistics.daysCount) days with cactus"
+        sessionsCountLabel.text = "\(leader.statistics.sessionsCount)"
+        totalFocusTimeLabel.text = "\(leader.statistics.totalFocusTimeInMinutes/60)h \(leader.statistics.totalFocusTimeInMinutes%60)m"
         
         
     }

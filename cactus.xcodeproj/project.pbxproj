@@ -14,7 +14,6 @@
 		C80E9BCE24D8AA1C00D360DF /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80E9BCD24D8AA1C00D360DF /* LeaderboardViewController.swift */; };
 		C80E9BD024D8B0F300D360DF /* SessionsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80E9BCF24D8B0F300D360DF /* SessionsStorage.swift */; };
 		C80E9BD224D8CB1900D360DF /* Leader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80E9BD124D8CB1900D360DF /* Leader.swift */; };
-		C80E9BD424D8CB8500D360DF /* LeadersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80E9BD324D8CB8500D360DF /* LeadersStorage.swift */; };
 		C80E9BD624D8D6B400D360DF /* SessionsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80E9BD524D8D6B400D360DF /* SessionsListTableViewCell.swift */; };
 		C829268A24D0B0140086E50C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829268924D0B0140086E50C /* AppDelegate.swift */; };
 		C829268E24D0B0140086E50C /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829268D24D0B0140086E50C /* SessionViewController.swift */; };
@@ -25,7 +24,6 @@
 		C83496AE24DB5F640019B0CD /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496AD24DB5F640019B0CD /* LearnViewController.swift */; };
 		C83496B124DBA3470019B0CD /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B024DBA3470019B0CD /* ArticleCollectionViewCell.swift */; };
 		C83496B424DC66410019B0CD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B324DC66410019B0CD /* Article.swift */; };
-		C83496B624DC68CE0019B0CD /* ArticlesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */; };
 		C842532E24E85B0700A069DD /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842532D24E85B0700A069DD /* ArticleViewController.swift */; };
 		C842533024E969C300A069DD /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842532F24E969C300A069DD /* Author.swift */; };
 		C842533224E975D100A069DD /* LeaderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C842533124E975D100A069DD /* LeaderProfileViewController.swift */; };
@@ -47,7 +45,6 @@
 		C80E9BCD24D8AA1C00D360DF /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		C80E9BCF24D8B0F300D360DF /* SessionsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsStorage.swift; sourceTree = "<group>"; };
 		C80E9BD124D8CB1900D360DF /* Leader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leader.swift; sourceTree = "<group>"; };
-		C80E9BD324D8CB8500D360DF /* LeadersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersStorage.swift; sourceTree = "<group>"; };
 		C80E9BD524D8D6B400D360DF /* SessionsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListTableViewCell.swift; sourceTree = "<group>"; };
 		C829268624D0B0140086E50C /* cactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C829268924D0B0140086E50C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +57,6 @@
 		C83496AD24DB5F640019B0CD /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		C83496B024DBA3470019B0CD /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		C83496B324DC66410019B0CD /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesStorage.swift; sourceTree = "<group>"; };
 		C842532D24E85B0700A069DD /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		C842532F24E969C300A069DD /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		C842533124E975D100A069DD /* LeaderProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderProfileViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				C83496B324DC66410019B0CD /* Article.swift */,
-				C83496B524DC68CE0019B0CD /* ArticlesStorage.swift */,
 				C842532F24E969C300A069DD /* Author.swift */,
 			);
 			path = Model;
@@ -277,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				C80E9BD124D8CB1900D360DF /* Leader.swift */,
-				C80E9BD324D8CB8500D360DF /* LeadersStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,7 +365,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C842533224E975D100A069DD /* LeaderProfileViewController.swift in Sources */,
-				C83496B624DC68CE0019B0CD /* ArticlesStorage.swift in Sources */,
 				C8B48F3624D22A49000E972A /* Session.swift in Sources */,
 				C8CE64F824D92F9B00909C02 /* LeaderboardTableViewCell.swift in Sources */,
 				C8B8471924E0D79B00D938F2 /* CactieShopCollectionViewCell.swift in Sources */,
@@ -395,7 +388,6 @@
 				C80E9BCE24D8AA1C00D360DF /* LeaderboardViewController.swift in Sources */,
 				C842533024E969C300A069DD /* Author.swift in Sources */,
 				C82926A024D0DA240086E50C /* BreakViewController.swift in Sources */,
-				C80E9BD424D8CB8500D360DF /* LeadersStorage.swift in Sources */,
 				C80E9BC824D893BE00D360DF /* CactusTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
