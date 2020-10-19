@@ -8,22 +8,33 @@
 
 import Foundation
 
-class Leader {
+class Statistics: Decodable {
+    
+    let daysCount: Int
+    let sessionsCount: Int
+    let totalFocusTimeInMinutes: Int
+    
+    init(daysCount: Int, sessionsCount: Int, totalFocusTimeInMinutes: Int) {
+        self.daysCount = daysCount
+        self.sessionsCount = sessionsCount
+        self.totalFocusTimeInMinutes = totalFocusTimeInMinutes
+    }
+    
+}
+
+class Leader: Decodable {
     
     //let hoursCount: Int
     
     let name: String
     let about: String
-    let daysCount: Int
-    let sessionsCount: Int
-    let totalFocusTimeInMinutes: Int
+    let statistics: Statistics
+
     
-    init(name: String, about: String, daysCount: Int, sessionsCount: Int, totalFocusTimeInMinutes: Int) {
+    init(name: String, about: String, statistics: Statistics) {
         self.name = name
         self.about = about
-        self.daysCount = daysCount
-        self.sessionsCount = sessionsCount
-        self.totalFocusTimeInMinutes = totalFocusTimeInMinutes
+        self.statistics = statistics
     }
     
 }

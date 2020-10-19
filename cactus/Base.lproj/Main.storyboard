@@ -541,30 +541,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afU-7x-gwV">
-                                                    <rect key="frame" x="16" y="31.5" width="29" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afU-7x-gwV">
+                                                    <rect key="frame" x="16" y="31.5" width="44" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="29" id="6iN-d7-X2F"/>
+                                                        <constraint firstAttribute="width" constant="44" id="6iN-d7-X2F"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                                     <color key="textColor" red="0.87450980389999999" green="0.30196078430000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 8" translatesAutoresizingMaskIntoConstraints="NO" id="dkV-jG-n1u">
-                                                    <rect key="frame" x="61" y="16" width="72" height="72"/>
+                                                    <rect key="frame" x="76" y="16" width="72" height="72"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="72" id="Zle-Zf-tkt"/>
                                                         <constraint firstAttribute="width" constant="72" id="czJ-YQ-AUc"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="180 hr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZv-jz-Bbn">
-                                                    <rect key="frame" x="149" y="16" width="36" height="14"/>
+                                                    <rect key="frame" x="164" y="16" width="36" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" name="grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dianne Russel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTW-oJ-brK">
-                                                    <rect key="frame" x="149" y="38" width="249" height="24"/>
+                                                    <rect key="frame" x="164" y="38" width="216" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" name="darkGrey"/>
                                                     <nil key="highlightedColor"/>
@@ -576,7 +576,7 @@
                                                 <constraint firstItem="dkV-jG-n1u" firstAttribute="leading" secondItem="afU-7x-gwV" secondAttribute="trailing" constant="16" id="RtH-p8-eDG"/>
                                                 <constraint firstItem="GZv-jz-Bbn" firstAttribute="top" secondItem="dkV-jG-n1u" secondAttribute="top" id="V24-hf-eJf"/>
                                                 <constraint firstItem="afU-7x-gwV" firstAttribute="centerY" secondItem="dkV-jG-n1u" secondAttribute="centerY" id="VeC-Mg-mIQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="RTW-oJ-brK" secondAttribute="trailing" constant="16" id="gmB-2O-aA2" userLabel="trailing = Leader Name Label.trailing + 16"/>
+                                                <constraint firstAttribute="trailing" secondItem="RTW-oJ-brK" secondAttribute="trailing" constant="34" id="gmB-2O-aA2" userLabel="trailing = Leader Name Label.trailing + 16"/>
                                                 <constraint firstItem="dkV-jG-n1u" firstAttribute="top" secondItem="L5o-Yz-i6G" secondAttribute="top" constant="16" id="jRy-Mm-ySk"/>
                                                 <constraint firstAttribute="bottom" secondItem="dkV-jG-n1u" secondAttribute="bottom" constant="16" id="lFV-JA-Uhc"/>
                                                 <constraint firstItem="RTW-oJ-brK" firstAttribute="leading" secondItem="GZv-jz-Bbn" secondAttribute="leading" id="tp9-ma-ynL"/>
@@ -596,11 +596,17 @@
                                     <outlet property="delegate" destination="waC-Ee-E55" id="Gn6-F7-l1u"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="G6d-uC-ExV">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.87450980389999999" green="0.30196078430000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
+                            <constraint firstItem="G6d-uC-ExV" firstAttribute="centerX" secondItem="HzC-Ae-JFt" secondAttribute="centerX" id="VWP-q2-h5m"/>
                             <constraint firstItem="Uyp-BL-DQV" firstAttribute="top" secondItem="SZE-0m-38U" secondAttribute="top" id="YcC-9h-pic"/>
                             <constraint firstItem="Uyp-BL-DQV" firstAttribute="bottom" secondItem="SZE-0m-38U" secondAttribute="bottom" id="f5e-of-b8h"/>
+                            <constraint firstItem="G6d-uC-ExV" firstAttribute="centerY" secondItem="HzC-Ae-JFt" secondAttribute="centerY" id="jZk-21-5Cs"/>
                             <constraint firstItem="Uyp-BL-DQV" firstAttribute="leading" secondItem="SZE-0m-38U" secondAttribute="leading" id="lOh-pX-ISB"/>
                             <constraint firstItem="Uyp-BL-DQV" firstAttribute="trailing" secondItem="SZE-0m-38U" secondAttribute="trailing" id="nJf-4v-qxP"/>
                         </constraints>
@@ -608,13 +614,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="51x-cA-TkE"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="G6d-uC-ExV" id="F2X-JA-8YR"/>
                         <outlet property="tableView" destination="Uyp-BL-DQV" id="PRC-id-v2k"/>
                         <segue destination="6tr-bq-XLM" kind="show" identifier="showLeaderProfile" id="dgN-je-Yfi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b79-B8-d9M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="806"/>
+            <point key="canvasLocation" x="1863.7681159420292" y="805.58035714285711"/>
         </scene>
         <!--Leader Profile View Controller-->
         <scene sceneID="Z0l-a1-WqD">
@@ -911,6 +918,11 @@ Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit 
                                     <outlet property="delegate" destination="aj6-Rs-T3S" id="iLO-S2-kPF"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" id="Tqj-6T-tiU">
+                                <rect key="frame" x="0.0" y="85" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.87450980389999999" green="0.30196078430000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
@@ -923,6 +935,7 @@ Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit 
                     </view>
                     <navigationItem key="navigationItem" id="C6B-OW-qll"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Tqj-6T-tiU" id="m26-M1-KaY"/>
                         <outlet property="collectionView" destination="qeJ-4e-AQx" id="8Zf-l3-fw0"/>
                         <segue destination="Uh3-4O-6C4" kind="show" identifier="showArticle" id="g8k-MM-gUC"/>
                     </connections>
